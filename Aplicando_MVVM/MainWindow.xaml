@@ -4,9 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplicando_MVVM"
+        xmlns:view="clr-namespace:Aplicando_MVVM.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Usando o Padrão MVVM" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="5" BorderBrush="SteelBlue" BorderThickness="2" Grid.Row="0" Background="Green">
+            <Label Height="30" Width="497" Content="Exemplo de utilização do Padrão MVVM - WPF" HorizontalAlignment="Center" Margin="-2,3"/>
+        </Border>
+        <Border CornerRadius="5" BorderBrush="SteelBlue" BorderThickness="2" Grid.Row="1" Margin="0,5,0,0" Background="Beige">
+            <view:ClienteView  x:Name="ClienteView"/>
+        </Border>
     </Grid>
 </Window>

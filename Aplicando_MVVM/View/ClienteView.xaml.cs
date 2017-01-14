@@ -12,25 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Aplicando_MVVM.ViewModel;
 
-namespace Aplicando_MVVM
+namespace Aplicando_MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ClienteView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClienteView : UserControl
     {
-        public MainWindow()
+        public ClienteView()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            ClienteViewModel cliViewModel = new ClienteViewModel();
-            cliViewModel.LoadClientes();
-            ClienteView.DataContext = cliViewModel;
         }
     }
 }
